@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>模板方法</title>
+
+    <link href="plugins/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="plugins/easyui/themes/metro/easyui.min.css" rel="stylesheet" />
+    <link href="plugins/easyui/themes/icon.css" rel="stylesheet" />
+    <link href="plugins/easyui/themes/mobile.min.css" rel="stylesheet" />
+
+
+    <script src="plugins/easyui/jquery.min.js"></script>
+    <script src="plugins/jquery/jquery.serializejson.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.js"></script>
+    <script src="plugins/easyui/jquery.easyui.min.js"></script>
+    <script src="plugins/easyui/jquery.easyui.mobile.min.js"></script>
+    <script src="plugins/easyui/locale/easyui-lang-zh_CN.js"></script>
+    <script src="plugins/easyui/plugins/datagrid-groupview.js"></script>
+    <script src="plugins/easyui/plugins/datagrid-cellediting.js"></script>
+    <script src="plugins/easyui/plugins/datagrid-detailview.js"></script>
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="plugins/json/json2.js"></script>
+    <![endif]-->
+    <script src="scripts/jquery-plugin-nameplace.js"></script>
+    <script src="scripts/jquery-plugin-meal.js"></script>
+    <script src="scripts/index.js"></script>
+
+
+</head>
+<body>
+
+    <div class="easyui-layout" id="mainLayout" data-options="fit:true">
+        <div id="toolbarRegion" data-options="region:'north',title:''," style="height:40px;padding-top: 5px;padding-left:8px;overflow: hidden;">
+
+        </div>
+        <div id="listCondimentRegion" data-options="region:'west',collapsedSize:0, title:'调味品列表',collapsible:false,hideExpandTool:true,expandMode:null" style="width:200px;">
+            <ul id="listCondiment" class="easyui-tree"></ul>
+        </div>
+        <div id="centerRegion" data-options="region:'center',title:'调味品称重登记表'">
+            <div id="showDataRegion" class="easyui-panel" data-options="fit:true">
+                <table id="showCondimentTable" data-options="fit:true"></table>
+            </div>
+
+            <div id="addCondimentRegion" class="easyui-panel" data-options="fit:true, footer:'#tableFooter'">
+
+            </div>
+        </div>
+    </div>
+
+    <div id="tableFooter" style="text-align: right;padding: 15px;">
+        <a href="javascript:void(0);" id="saveBtn" class="easyui-linkbutton" style="width:72px;height:35px;" onclick="addCondimentForm.add()">确定</a>
+    </div>
+</body>
+</html>
