@@ -5,27 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EasyuiGenerate"
         mc:Ignorable="d"
-        Title="代码生成" Height="424.8" Width="510.976" Initialized="Window_Initialized">
+        Title="代码生成" Height="424.8" Width="510.976" Initialized="Window_Initialized" WindowStartupLocation="CenterScreen">
     <Grid>
         <Label Content="模版" HorizontalAlignment="Left" Margin="48,35,0,0" VerticalAlignment="Top"/>
         <GroupBox Header="模板信息" HorizontalAlignment="Left" Height="80" Margin="20,10,0,0" VerticalAlignment="Top" Width="464">
-            <ComboBox HorizontalAlignment="Left" Margin="96,13,0,0" VerticalAlignment="Top" Width="238"/>
+            <ComboBox Name="comTemplate" HorizontalAlignment="Left" Margin="96,13,0,0" VerticalAlignment="Top" Width="207" Height="23"/>
         </GroupBox>
-        <GroupBox Header="生成路径" HorizontalAlignment="Left" Height="80" Margin="20,104,0,0" VerticalAlignment="Top" Width="464">
+        <GroupBox Header="生成路径" HorizontalAlignment="Left" Height="80" Margin="21,98,0,0" VerticalAlignment="Top" Width="464">
             <TextBox Name="textCodePath" HorizontalAlignment="Left" Height="23" Margin="97,15,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="238"/>
         </GroupBox>
-        <Button Name="btnSelectPath" Content="选择" HorizontalAlignment="Left" Margin="382,138,0,0" VerticalAlignment="Top" Width="75"/>
-        <Label Content="代码生成路径" HorizontalAlignment="Left" Margin="32,135,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.311,0.261"/>
-        <GroupBox Header="项目参数" HorizontalAlignment="Left" Height="160" Margin="20,218,0,0" VerticalAlignment="Top" Width="464">
+        <Button Name="btnSelectPath" Content="选择" HorizontalAlignment="Left" Margin="382,129,0,0" VerticalAlignment="Top" Width="75" Click="btnSelectPath_Click" Height="23"/>
+        <Label Content="代码生成路径" HorizontalAlignment="Left" Margin="32,129,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.311,0.261"/>
+        <GroupBox Header="项目参数" HorizontalAlignment="Left" Height="120" Margin="21,210,0,0" VerticalAlignment="Top" Width="464">
 
         </GroupBox>
-        <Label Content="项目名：" HorizontalAlignment="Left" Margin="39,263,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="textProject" HorizontalAlignment="Left" Height="23" Margin="94,263,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="148"/>
-        <Label Content="包名：" HorizontalAlignment="Left" Margin="267,263,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="textPackage" HorizontalAlignment="Left" Height="23" Margin="322,263,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="148"/>
-        <Label Content="数据库名：" HorizontalAlignment="Left" Margin="39,311,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="textDataBase" HorizontalAlignment="Left" Height="23" Margin="94,311,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="148"/>
-        <Label Content="表名：" HorizontalAlignment="Left" Margin="267,311,0,0" VerticalAlignment="Top"/>
-        <ComboBox Name="comTables" HorizontalAlignment="Left" Margin="322,316,0,0" VerticalAlignment="Top" Width="148"/>
+        <Label Content="项目名：" HorizontalAlignment="Left" Margin="43,242,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="textProject" HorizontalAlignment="Left" Height="23" Margin="98,242,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="148"/>
+        <Label Content="包名：" HorizontalAlignment="Left" Margin="271,242,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="textPackage" HorizontalAlignment="Left" Height="23" Margin="326,242,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="148"/>
+        <Label Content="数据库名：" HorizontalAlignment="Left" Margin="43,290,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="textDataBase" HorizontalAlignment="Left" Height="23" Margin="98,290,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="148"/>
+        <Label Content="表名：" HorizontalAlignment="Left" Margin="271,290,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="comTables" HorizontalAlignment="Left" Margin="326,290,0,0" VerticalAlignment="Top" Width="148" Height="23"/>
+        <Button Name="btnGenerateCode" Content="生成代码" HorizontalAlignment="Left" Margin="399,354,0,0" VerticalAlignment="Top" Width="75" Height="26"/>
     </Grid>
 </Window>

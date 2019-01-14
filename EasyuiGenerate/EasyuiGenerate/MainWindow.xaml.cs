@@ -39,17 +39,17 @@ namespace EasyuiGenerate
 
             if (String.IsNullOrEmpty(server))
             {
-                MessageBox.Show("请输入服务器IP");
+                System.Windows.MessageBox.Show("请输入服务器IP");
                 return;
             }
             if (String.IsNullOrEmpty(uid))
             {
-                MessageBox.Show("请输入用户名");
+                System.Windows.MessageBox.Show("请输入用户名");
                 return;
             }
             if (String.IsNullOrEmpty(password))
             {
-                MessageBox.Show("请输入密码");
+                System.Windows.MessageBox.Show("请输入密码");
                 return;
             }
 
@@ -76,7 +76,7 @@ namespace EasyuiGenerate
             }
             catch (Exception)
             {
-                MessageBox.Show("连接出错！请检查您的用户名和密码是否正确");
+                System.Windows.MessageBox.Show("连接出错！请检查您的用户名和密码是否正确");
             }
         }
 
@@ -87,16 +87,16 @@ namespace EasyuiGenerate
             if (String.IsNullOrEmpty(selectDataBase))
             {
 
-                MessageBox.Show("请先连接选择数据库");
+                System.Windows.MessageBox.Show("请先连接选择数据库");
                 return;
             }
 
             connStr += ";database=" + selectDataBase;
 
+            this.Visibility = Visibility.Hidden;
             GenerateCodeWindow gcWindwow = new GenerateCodeWindow(connStr);
             gcWindwow.ShowDialog();
 
-            this.Visibility = Visibility.Hidden;
             this.Close();
         }
 
