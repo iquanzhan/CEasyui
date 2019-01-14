@@ -1,0 +1,7 @@
+public void set{{field_name_up}}({{fileld_type}} {{field_name}}) {
+    this.{{field_name}} = {{field_name}};
+}
+
+public {{fileld_type}} get{{field_name_up}}() {
+    return {{field_name}};
+}

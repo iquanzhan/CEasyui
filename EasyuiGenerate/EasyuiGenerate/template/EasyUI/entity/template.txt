@@ -1,0 +1,14 @@
+package com.zsat.entity;
+
+import javax.persistence.*;
+import java.io.Serializable;
+import java.util.Date;
+
+/**
+ * {{table_name_up}}
+ */
+@Table(name = "{{table_name}}")
+public class {{table_name_up}} implements Serializable {
+	{{file="field.txt"}}
+	{{file="fieldmethod.txt"}}
+}
